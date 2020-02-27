@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import firebase from 'firebase';
+import SidebarComponent from './sidebar/sidebar';
+import EditorComponent from './editor/editor';
 
 export default class App extends React.Component {
 	constructor(props) {
@@ -32,9 +34,11 @@ export default class App extends React.Component {
 
 	render() {
 		return (
-			<>
-				<p>Hello world</p>
-			</>
+			<div className='app-container'>
+				<SidebarComponent />
+
+				<EditorComponent />
+			</div>
 		);
 	}
 }
